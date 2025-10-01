@@ -41,7 +41,7 @@ public class CentralController {
 
                     SocketChannel client = (SocketChannel) key.channel();
 
-                    ByteBuffer buffer = ByteBuffer.allocate(256); // make the buffer
+                    ByteBuffer buffer = ByteBuffer.allocate(512); // make the buffer
 
                     int bytesRead = client.read(buffer); // read the information
                     if (bytesRead == -1) { // reached end of stream, meaning no message was sent, fault
