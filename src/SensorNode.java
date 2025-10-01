@@ -13,8 +13,8 @@ public class SensorNode {
         this.activeSensor = new ObstacleSensor(id, seed);
         this.obstacleSensors.add(this.activeSensor);
         this.serverSocket = new Socket("localhost", 9999);
-        for (int i = 0; i < numSensors; i++) {
-            obstacleSensors.add(new ObstacleSensor(id + "_backup_" + (i + 1), seed));
+        for (int i = 1; i < numSensors; i++) {
+            obstacleSensors.add(new ObstacleSensor(id + "_backup_" + i, seed));
         }
     }
 
@@ -55,6 +55,10 @@ public class SensorNode {
         }
         String id = args[0];
         int numSensors = Integer.parseInt(args[1]);
+        if (numSensors < 1) {
+            System.out.println("INVALID SENSOR COUNT PROVIDED");
+            return;
+        }
         SensorNode node = new SensorNode(id, null, numSensors);
         node.run();
     }
