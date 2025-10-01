@@ -6,10 +6,10 @@
 
 ## How To Run The Code
 
-1. Open a terminal and navigate to the root directory of the project
-2. In the terminal, type `javac .\CentralController.java .\ObstacleSensor.java`. This will compile the java code and allow it to be run from multiple terminals
+1. Open a terminal and navigate to the src directory of the project
+2. In the terminal, type `javac *.java`. This will compile the java code and allow it to be run from multiple terminals
 3. In the same terminal, type `java CentralController`. You should see a message saying "Server started on port 9999". Keep this terminal open.
-4. Open another terminal and navigate to the root directory and type `java ObstacleSensor 'SensorName'`. Replace 'SensorName' with any name for the sensor, don't include the ' '. You should begin to see the Sensor sending out a Heartbeat
+4. Open another terminal and navigate to the root directory and type `java SensorNode 'SensorName'`. Replace 'SensorName' with any name for the sensor, don't include the ' '. You should begin to see the Sensor sending out a Heartbeat
 5. Look at the CentralController terminal and you should see a message appear from that sensor. There is a 5% chance every heartbeat that the ObstacleSensor will fault, once it does, the sensor will crash, and the controller should see that the connection was lost
 6. Repeat step 4 with as many sensors as you would like, give them different names for output purposes. Make sure to run each sensor in its own terminal
 7. Close all terminals once done
