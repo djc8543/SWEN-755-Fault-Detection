@@ -8,8 +8,8 @@ public class ObstacleSensor {
 
     public ObstacleSensor(String id, Integer seed) {
         this.id = id;
-        this.sensor = new Sensor(0, 0, 0, 10, 10, 10);
         this.random = (seed == null) ? new Random() : new Random(seed);
+        this.sensor = new Sensor(0, 0, 0, 10, 10, 10, random);
     }
 
     public String getId() {
