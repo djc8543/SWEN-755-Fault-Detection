@@ -33,10 +33,6 @@ public class SensorNode {
         }
     }
 
-    public void createSensors(int numSensors) {
-
-    }
-
     public void startBackupSensor() {
         int sensorIndex = obstacleSensors.indexOf(activeSensor);
         if (sensorIndex + 1 < obstacleSensors.size()) {
